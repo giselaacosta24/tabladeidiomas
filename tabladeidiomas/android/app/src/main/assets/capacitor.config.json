@@ -1,0 +1,6 @@
+{
+	"appId": "io.tabladeidiomas.starter",
+	"appName": "tabladeidiomas",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

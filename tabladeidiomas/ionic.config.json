@@ -1,0 +1,8 @@
+{
+  "name": "tabladeidiomas",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

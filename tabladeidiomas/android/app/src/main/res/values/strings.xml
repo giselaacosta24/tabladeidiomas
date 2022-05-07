@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">tabladeidiomas</string>
+    <string name="title_activity_main">tabladeidiomas</string>
+    <string name="package_name">io.tabladeidiomas.starter</string>
+    <string name="custom_url_scheme">io.tabladeidiomas.starter</string>
+</resources>

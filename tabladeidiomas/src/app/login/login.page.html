@@ -1,0 +1,55 @@
+
+ <ion-content text-center class="background-image">
+
+
+  <ion-grid>
+    <ion-row>
+    </ion-row>
+    <ion-row>
+
+    </ion-row>
+    <ion-card-content class="card-content">
+      <ion-row>
+        <div class="centrado">
+          <h1>Ingresar</h1>
+        </div>
+        <ion-col size="12">
+          <form class="form" [formGroup]="userForm" (ngSubmit)="Login(userForm.value)">
+            <ion-item>
+              <ion-label position="floating">Correo</ion-label>
+              <ion-input type="text" formControlName="email"></ion-input>
+            </ion-item>
+            
+            <ng-container *ngFor="let error of error_msg.email">
+              <div *ngIf="userForm.get('email').hasError(error.type) && (userForm.get('email').dirty || userForm.get('email').touched)">
+                {{ error.message }}
+              </div>
+            </ng-container>
+        
+            <ion-item>
+              <ion-label position="floating" color="primary">Contraseña</ion-label>
+              <ion-input type="password" formControlName="password" class="form-controll" required></ion-input>
+            </ion-item>
+            
+            <ng-container *ngFor="let error of error_msg.password">
+                <div *ngIf="userForm.get('password').hasError(error.type) && (userForm.get('password').dirty || userForm.get('password').touched)">
+                  {{ error.message }}
+                </div>
+            </ng-container>
+        
+            <ion-button type="submit" expand="block" [disabled]="!userForm.valid">Ingresar</ion-button>
+            
+            <label class="ion-text-center" color="danger">{{errorMsg}}</label>
+          </form>
+          <p class="ion-text-center">No esta registrado aun? <a (click)="registro()">Registro</a></p>
+
+        </ion-col>
+ 
+      </ion-row>
+    </ion-card-content>
+    <ion-row>
+
+  
+    </ion-row>
+  </ion-grid>
+</ion-content>
